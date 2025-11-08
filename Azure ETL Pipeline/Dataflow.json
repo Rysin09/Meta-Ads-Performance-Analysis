@@ -1,1 +1,64 @@
-
+{
+    "name": "df_campaigns_transform",
+    "properties": {
+        "type": "MappingDataFlow",
+        "typeProperties": {
+            "sources": [
+                {
+                    "dataset": {
+                        "referenceName": "ds_blob_campaigns",
+                        "type": "DatasetReference"
+                    },
+                    "name": "source1"
+                }
+            ],
+            "sinks": [
+                {
+                    "dataset": {
+                        "referenceName": "ds_sql_campaigns",
+                        "type": "DatasetReference"
+                    },
+                    "name": "sink1"
+                }
+            ],
+            "transformations": [
+                {
+                    "name": "ConvertDate"
+                }
+            ],
+            "scriptLines": [
+                "source(output(",
+                "          campaign_id as string,",
+                "          name as string,",
+                "          start_date as string,",
+                "          end_date as string,",
+                "          duration_days as string,",
+                "          total_budget as string",
+                "     ),",
+                "     allowSchemaDrift: true,",
+                "     validateSchema: false,",
+                "     ignoreNoFilesFound: false) ~> source1",
+                "source1 derive(start_date = toTimestamp(start_date, 'dd-MM-yyyy'),",
+                "          end_date = toTimestamp(end_date, 'dd-MM-yyyy')) ~> ConvertDate",
+                "ConvertDate sink(allowSchemaDrift: true,",
+                "     validateSchema: false,",
+                "     input(",
+                "          campaign_id as integer,",
+                "          name as string,",
+                "          start_date as date,",
+                "          end_date as date,",
+                "          duration_days as integer,",
+                "          total_budget as double",
+                "     ),",
+                "     deletable:false,",
+                "     insertable:true,",
+                "     updateable:false,",
+                "     upsertable:false,",
+                "     format: 'table',",
+                "     skipDuplicateMapInputs: true,",
+                "     skipDuplicateMapOutputs: true,",
+                "     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+            ]
+        }
+    }
+}
