@@ -1,104 +1,193 @@
-<h1>Meta Ads Performance Analysis Dashboard</h1>
+<!-- PROJECT TITLE -->
+<h1 align="center" style="font-weight:700; font-size:38px;">
+  Meta Ads Performance Analysis Dashboard
+</h1>
 
-<p>
-This project presents a comprehensive analysis of Meta Ads (Facebook & Instagram) performance using 
-<strong>Power BI</strong>, <strong>DAX</strong>, and a structured <strong>data modeling</strong> approach. 
-The goal is to provide actionable insights into campaign performance, audience behavior, 
-budget utilization, and ROI efficiency.
+<!-- SUBTITLE -->
+<p align="center" style="font-size:16px; max-width:750px; margin:auto;">
+A complete marketing intelligence system built using 
+<b>Power BI</b>, <b>DAX</b>, and a refined <b>data modelling architecture</b>.  
+This project delivers deep insights into Meta ads performance, budget efficiency, audience behaviour,  
+and ROI through a clean, interactive dashboard.
 </p>
 
-<hr>
+<br>
 
-<h2>Project Overview</h2>
-<p>
-The dashboard offers data-driven insights for marketing teams to evaluate:
+<!-- BADGES / TECH STACK -->
+<p align="center">
+
+  <!-- Power BI -->
+  <img src="https://img.shields.io/badge/Power%20BI-Data%20Visualization-F2C811?style=for-the-badge&logo=Power%20BI&logoColor=black" />
+
+  <!-- DAX -->
+  <img src="https://img.shields.io/badge/DAX-Analytics-blue?style=for-the-badge" />
+
+  <!-- Python -->
+  <img src="https://img.shields.io/badge/Python-Data%20Cleaning-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+
+  <!-- SQL -->
+  <img src="https://img.shields.io/badge/SQL-Data%20Processing-005C84?style=for-the-badge&logo=postgresql&logoColor=white" />
+
+  <!-- GitHub -->
+  <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" />
+
 </p>
+
+<br>
+
+<hr style="margin:40px 0;">
+
+<!-- OVERVIEW SECTION -->
+<h2>
+  <img src="https://img.icons8.com/ios-filled/28/000000/overview-pages-3.png" 
+       style="vertical-align:middle; margin-right:10px;">
+  Project Overview
+</h2>
+
+<p>
+This project analyzes Meta Ads (Facebook & Instagram) to evaluate campaign performance, optimize spend, 
+and uncover the behavioural patterns of different audiences.  
+Using <strong>Power BI</strong> and <strong>DAX</strong>, the dashboard transforms raw datasets into business-ready insights for:
+</p>
+
 <ul>
-  <li>Campaign efficiency and performance trends</li>
-  <li>Cost and ROI analysis across campaigns and platforms</li>
-  <li>Demographic behavior (age, gender, region)</li>
-  <li>Time-based engagement patterns</li>
-  <li>Ad-type effectiveness and funnel performance</li>
+  <li>Campaign performance evaluation</li>
+  <li>Budget efficiency & ROI measurement</li>
+  <li>Audience behaviour and demographics</li>
+  <li>Time-based engagement trends</li>
+  <li>Ad format effectiveness</li>
 </ul>
 
-<hr>
+<p>
+The final dashboard is designed with a corporate analytical style suitable for presentations, decision-making,  
+and portfolio demonstration.
+</p>
 
-<h2>Repository Contents</h2>
-<table>
-  <tr><th>File</th><th>Description</th></tr>
-  <tr><td>ads.csv</td><td>Ad-level information including platform, ad type, and targeting details</td></tr>
-  <tr><td>ad_events.csv</td><td>User interaction logs such as impressions, clicks, shares, and purchases</td></tr>
-  <tr><td>campaigns.csv</td><td>Campaign metadata including total budget</td></tr>
-  <tr><td>users.csv</td><td>User demographic information (age, gender, country)</td></tr>
-  <tr><td>Power BI File (.pbix)</td><td>Complete dashboard with all visuals and calculations</td></tr>
-  <tr><td>DAX Documentation</td><td>Fully documented measures, calculated columns, titles, and tables</td></tr>
+<hr style="margin:40px 0;">
+
+<!-- FILES SECTION -->
+<h2>
+  <img src="https://img.icons8.com/ios-glyphs/28/000000/documents.png" 
+       style="vertical-align:middle; margin-right:10px;">
+  Repository Contents
+</h2>
+
+<table style="width:100%; border-collapse:collapse;">
+  <tr style="background:#f2f2f2; font-weight:600;">
+    <td style="padding:10px; border:1px solid #ddd;">File</td>
+    <td style="padding:10px; border:1px solid #ddd;">Description</td>
+  </tr>
+
+  <tr>
+    <td style="padding:10px; border:1px solid #ddd;">ads.csv</td>
+    <td style="padding:10px; border:1px solid #ddd;">Ad metadata (platform, ad type, demographic targeting)</td>
+  </tr>
+
+  <tr>
+    <td style="padding:10px; border:1px solid #ddd;">ad_events.csv</td>
+    <td style="padding:10px; border:1px solid #ddd;">User activity events (impressions, clicks, shares, purchases)</td>
+  </tr>
+
+  <tr>
+    <td style="padding:10px; border:1px solid #ddd;">campaigns.csv</td>
+    <td style="padding:10px; border:1px solid #ddd;">Campaign-level data including budgets</td>
+  </tr>
+
+  <tr>
+    <td style="padding:10px; border:1px solid #ddd;">users.csv</td>
+    <td style="padding:10px; border:1px solid #ddd;">User demographic & location information</td>
+  </tr>
+
+  <tr>
+    <td style="padding:10px; border:1px solid #ddd;">Dashboard (.pbix)</td>
+    <td style="padding:10px; border:1px solid #ddd;">Final interactive Power BI dashboard</td>
+  </tr>
+
+  <tr>
+    <td style="padding:10px; border:1px solid #ddd;">DAX Documentation</td>
+    <td style="padding:10px; border:1px solid #ddd;">All measures, titles, tables and calculated columns</td>
+  </tr>
 </table>
 
-<hr>
+<hr style="margin:40px 0;">
 
-<h2>Dashboard Structure (5 Pages)</h2>
+<!-- DASHBOARD ARCHITECTURE -->
+<h2>
+  <img src="https://img.icons8.com/ios/28/000000/combo-chart--v1.png" 
+       style="vertical-align:middle; margin-right:10px;">
+  Dashboard Architecture
+</h2>
+
+<p>The dashboard is divided into five analytical pages:</p>
 
 <h3>1. Executive Overview</h3>
 <ul>
-  <li>KPI metrics (Impressions, Clicks, Engagement, Purchases)</li>
-  <li>Platform distribution analysis</li>
+  <li>Key campaign KPIs</li>
+  <li>Platform distribution</li>
   <li>Top performing campaigns</li>
-  <li>Monthly engagement and metric trends</li>
-  <li>Dynamic measure switching</li>
+  <li>Monthly performance trendline</li>
+  <li>Dynamic metrics selector</li>
 </ul>
 
 <h3>2. Audience Insights</h3>
 <ul>
-  <li>Age and gender performance breakdown</li>
-  <li>Country-wise engagement map</li>
-  <li>Matrix of demographic engagement rates</li>
-  <li>Dynamic demographic titles</li>
+  <li>Gender, age, and country-based performance</li>
+  <li>Engagement matrices</li>
+  <li>Audience behaviour summary</li>
 </ul>
 
 <h3>3. ROI & Budget Efficiency</h3>
 <ul>
-  <li>Cost metrics (CPA, CPC, CPE)</li>
-  <li>ROI and ROAS calculations</li>
-  <li>Waterfall analysis of Budget → Spend → ROI</li>
-  <li>Scatter plot showing CTR vs Conversion vs Budget</li>
-  <li>Campaign-wise cost-efficiency comparison</li>
+  <li>CPA, CPC, CPE metrics</li>
+  <li>ROI calculations</li>
+  <li>Waterfall: Budget → Spend → ROI</li>
+  <li>Cost-to-conversion scatter analysis</li>
 </ul>
 
 <h3>4. Time & Trend Analysis</h3>
 <ul>
-  <li>Hourly performance trends</li>
-  <li>Weekly engagement by ad type</li>
-  <li>Monthly conversion and engagement trends</li>
-  <li>Date-based calendar visual patterns</li>
+  <li>Hourly behaviour visualization</li>
+  <li>Weekly performance by ad type</li>
+  <li>Monthly trends</li>
+  <li>Calendar distribution heatmap</li>
 </ul>
 
 <h3>5. Ad Type & Campaign Deep Dive</h3>
 <ul>
-  <li>Ad type performance matrix across platforms</li>
-  <li>Campaign funnel (Impressions → Clicks → Purchases)</li>
-  <li>Detailed campaign-level metric table</li>
-  <li>Ad creative effectiveness analysis</li>
+  <li>Ad type cross-platform comparison</li>
+  <li>Campaign-level full funnel</li>
+  <li>Detailed performance tables</li>
 </ul>
 
-<hr>
+<hr style="margin:40px 0;">
 
-<h2>Data Model</h2>
-<pre>
+<!-- DATA MODEL -->
+<h2>
+  <img src="https://img.icons8.com/external-flat-icons-inmotus-design/28/000000/external-data-analytics-analytics-flat-icons-inmotus-design.png"
+       style="vertical-align:middle; margin-right:10px;">
+  Data Model
+</h2>
+
+<pre style="background:#f8f8f8; padding:20px; border-radius:6px; font-size:14px;">
 campaigns ───┬── ads ─── ad_events
              └── users
 </pre>
 
 <p>
-A star-schema model is implemented with <strong>ad_events</strong> as the fact table and campaigns, ads, users, and calendar tables as dimensions. 
-This ensures scalable performance and accurate DAX evaluation.
+This star-schema model ensures clean filtering, efficient querying, and accurate DAX behaviour.
 </p>
 
-<hr>
+<hr style="margin:40px 0;">
 
-<h2>Key DAX Measures</h2>
+<!-- DAX SECTION -->
+<h2>
+  <img src="https://img.icons8.com/ios/28/000000/formula-fx.png" 
+       style="vertical-align:middle; margin-right:10px;">
+  Key DAX Measures
+</h2>
 
-<h3>Performance Metrics</h3>
-<pre>
+<h3>Performance Measures</h3>
+<pre style="background:#f8f8f8; padding:20px; border-radius:6px;">
 Impressions = COUNTROWS(FILTER(ad_events, ad_events[event_type] = "Impression"))
 Clicks = COUNTROWS(FILTER(ad_events, ad_events[event_type] = "Click"))
 Engagement = [Clicks] + [Shares] + [Comments]
@@ -107,81 +196,79 @@ Engagement Rate = DIVIDE([Engagement], [Impressions], 0)
 Conversion Rate = DIVIDE([Purchases], [Clicks], 0)
 </pre>
 
-<h3>Budget & ROI Metrics</h3>
-<pre>
+<h3>Budget & ROI Measures</h3>
+<pre style="background:#f8f8f8; padding:20px; border-radius:6px;">
 Total Budget = SUM(campaigns[total_budget])
 CPA = DIVIDE([Total Budget], [Purchases], 0)
 CPC = DIVIDE([Total Budget], [Clicks], 0)
 CPE = DIVIDE([Total Budget], [Engagement], 0)
-Return of Investment (ROI) = [Purchases] * 1000   // Assumed APV
-</pre>
-
-<h3>Dynamic Titles</h3>
-<pre>
-Age Title = SELECTEDVALUE('Select Dynamic Measures'[Dynamic Title]) & " by Target Age"
-Gender Title = SELECTEDVALUE('Select Dynamic Measures'[Dynamic Title]) & " by Gender"
-Hourly Trend = "Hourly " & SELECTEDVALUE('Select Dynamic Measures'[Dynamic Title]) & " Trend"
-Weekly Trend = "Weekly " & SELECTEDVALUE('Select Dynamic Measures'[Dynamic Title]) & " Trend"
+Return of Investment (ROI) = [Purchases] * 1000
 </pre>
 
 <h3>Custom Tables</h3>
-<h4>Budget Flow Table</h4>
-<pre>
-Budget Flow =
+<pre style="background:#f8f8f8; padding:20px; border-radius:6px;">
+Budget Flow = 
 UNION(
-    ROW("Stage", "Total Budget", "Value", [Total Budget]),
-    ROW("Stage", "Spent Budget", "Value", [Spend Budget]),
-    ROW("Stage", "ROI Value", "Value", [Return of Investment (ROI)])
+  ROW("Stage", "Total Budget", "Value", [Total Budget]),
+  ROW("Stage", "Spent Budget", "Value", [Spend Budget]),
+  ROW("Stage", "ROI Value", "Value", [Return of Investment (ROI)])
 )
 </pre>
 
-<h4>Campaign Funnel Table</h4>
-<pre>
-Campaign Funnel =
-VAR baseTable =
-    SUMMARIZECOLUMNS(
-        campaigns[campaign_id],
-        campaigns[name],
-        "Impressions", CALCULATE(COUNTROWS(FILTER(ad_events, ad_events[event_type] = "Impression"))),
-        "Clicks", CALCULATE(COUNTROWS(FILTER(ad_events, ad_events[event_type] = "Click"))),
-        "Purchases", CALCULATE(COUNTROWS(FILTER(ad_events, ad_events[event_type] = "Purchase")))
-    )
-RETURN
-UNION(
-    SELECTCOLUMNS(baseTable, "Campaign Name", [name], "Stage", "Impressions", "Value", [Impressions]),
-    SELECTCOLUMNS(baseTable, "Campaign Name", [name], "Stage", "Clicks", "Value", [Clicks]),
-    SELECTCOLUMNS(baseTable, "Campaign Name", [name], "Stage", "Purchases", "Value", [Purchases])
-)
-</pre>
+<hr style="margin:40px 0;">
 
-<hr>
+<!-- HOW TO USE -->
+<h2>
+  <img src="https://img.icons8.com/ios-glyphs/28/000000/download--v1.png" 
+       style="vertical-align:middle; margin-right:10px;">
+  How to Use This Project
+</h2>
 
-<h2>How to Use This Project</h2>
 <ol>
-  <li>Clone the repository</li>
-<pre>git clone https://github.com/Rysin09/Meta-Ads-Performance-Analysis</pre>
+  <li>Clone the repository:</li>
+<pre style="background:#f8f8f8; padding:20px; border-radius:6px;">git clone https://github.com/Rysin09/Meta-Ads-Performance-Analysis</pre>
+
   <li>Open the Power BI (.pbix) file</li>
-  <li>Ensure data model relationships are correctly created</li>
-  <li>Review and apply DAX measures</li>
-  <li>Explore interactive dashboard pages</li>
+  <li>Confirm data model relationships</li>
+  <li>Review DAX expressions</li>
+  <li>Explore all 5 dashboard pages</li>
 </ol>
 
-<hr>
+<hr style="margin:40px 0;">
 
-<h2>Insights Delivered</h2>
+<!-- INSIGHTS -->
+<h2>
+  <img src="https://img.icons8.com/ios-filled/28/000000/insight.png" 
+       style="vertical-align:middle; margin-right:10px;">
+  Analytical Insights Delivered
+</h2>
+
 <ul>
-  <li>Platform-wise ROI comparison</li>
-  <li>Audience demographic behavior</li>
-  <li>Campaign-level performance benchmarks</li>
-  <li>Budget utilization and cost efficiency</li>
-  <li>Time-based engagement distribution</li>
-  <li>Ad type success and funnel performance</li>
+  <li>High-performing campaigns and audiences</li>
+  <li>Platform-level ROI performance</li>
+  <li>Budget effectiveness and spend optimization</li>
+  <li>Engagement patterns across time</li>
+  <li>Ad type performance comparison</li>
+  <li>Full-funnel performance visualization</li>
 </ul>
 
-<hr>
+<hr style="margin:40px 0;">
 
-<h2>Author</h2>
+<!-- AUTHOR -->
+<h2>
+  <img src="https://img.icons8.com/ios-glyphs/26/000000/user-male-circle.png" 
+       style="vertical-align:middle; margin-right:10px;">
+  Author
+</h2>
+
 <p>
-This project was developed as a professional demonstration of Power BI analytics, DAX modeling, 
-and marketing data intelligence. Suggestions and contributions are welcome through GitHub issues or pull requests.
+This project was designed as a professional demonstration of data analytics, BI development, and applied marketing intelligence.  
+It reflects expertise in Power BI, DAX modeling, data transformation, and storytelling with data.  
 </p>
+
+<h2 style="font-weight:600;">8. Author</h2>
+<p>
+Designed and developed as a portfolio project demonstrating applied analytics, 
+data modeling expertise, and real-world marketing intelligence capabilities.
+</p>
+
