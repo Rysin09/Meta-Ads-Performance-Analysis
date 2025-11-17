@@ -1,3 +1,9 @@
+<!-- ======================= META LOGO ======================== -->
+<p align="center">
+  <img src="https://i.imgflip.com/767xd3.png" 
+       width="250" 
+       alt="Meta Logo">
+</p>
 <!-- ========================== TITLE =============================== -->
 <h1 align="center" style="font-size:38px; font-weight:700; margin-bottom:10px;">
   Meta Ads Performance Analysis Dashboard
